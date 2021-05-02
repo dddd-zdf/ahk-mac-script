@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -49,6 +49,7 @@ $^u::
 Return
 $!LButton::
 	SendInput {Ctrl Down}{Click Left}{Ctrl Up}
+Return
 $!1::
         SendInput {Ctrl Down}{1}{Ctrl Up}
 Return
@@ -78,4 +79,7 @@ $!9::
 Return
 $!+T::
         SendInput {Ctrl Down}{Shift Down}{T}{Ctrl Up}{Shift Up}
+Return
+$!n::
+	SendInput {Ctrl Down}{n}{Ctrl Up}
 Return
