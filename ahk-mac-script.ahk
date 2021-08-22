@@ -2,6 +2,11 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+
+
+$!Enter::
+	SendInput {Ctrl Down}{Enter}{Ctrl Up}
 $!c::
 	SendInput {Ctrl Down}{c}{Ctrl Up}
 Return
@@ -78,8 +83,35 @@ $!9::
         SendInput {Ctrl Down}{9}{Ctrl Up}
 Return
 $!+T::
-        SendInput {Ctrl Down}{Shift Down}{T}{Ctrl Up}{Shift Up}
+	SendInput {Ctrl Down}{Shift Down}{T}{Ctrl Up}{Shift Up}
 Return
 $!n::
 	SendInput {Ctrl Down}{n}{Ctrl Up}
+Return
+$!+Up::
+	SendInput {Ctrl Down}{Shift Down}{Up}{Shift Up}{Ctrl Up}
+Return
+$!Up::
+	SendInput {Ctrl Down}{Up}{Ctrl Up}
+Return
+$!Down::
+	SendInput {Ctrl Down}{Down}{Ctrl Up}
+Return
+$!+Down::
+	SendInput {Ctrl Down}{Shift Down}{Down}{Shift Up}{Ctrl Up}
+Return
+$!Left::
+	SendInput {Ctrl Down}{Left}{Ctrl Up}
+Return
+$!+Left::
+	SendInput {Ctrl Down}{Shift Down}{Left}{Shift Up}{Ctrl Up}
+Return
+$!Right::
+	SendInput {Ctrl Down}{Right}{Ctrl Up}
+Return
+$!+Right::
+	SendInput {Ctrl Down}{Shift Down}{Right}{Shift Up}{Ctrl Up}
+Return
+$^Right::
+	SendInput {Alt Down}{Right}{Alt Up}
 Return
